@@ -1,0 +1,4 @@
+#%Module
+append-path MODULEPATH /opt/hpc/modules/compilers
+append-path MODULEPATH /opt/hpc/modules/programs
+# System-wide pre-loaded standard modules

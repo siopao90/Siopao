@@ -1,0 +1,21 @@
+#%Module###########################################
+if { [ module-info mode load ] } {
+  puts stderr "Anaconda3 has been loaded."
+}
+
+if { [ module-info mode remove ] } {
+  puts stderr "Anaconda3 has been unloaded."
+}
+
+proc ModulesHelp {} {
+  puts stderr ""
+}
+
+module-whatis "Anacond3 Python Environment"
+
+set		prefix		/opt/hpc/packages/programs/anaconda
+prepend-path	PATH		${prefix}/bin
+prepend-path	MANPATH		${prefix}/man
+prepend-path	LIBRARY_PATH	${prefix}/lib
+prepend-path	CPATH		${prefix}/include
+
